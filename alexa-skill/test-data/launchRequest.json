@@ -1,0 +1,19 @@
+{
+  "session": {
+    "sessionId": "SessionId.2780d302-c219-4c5c-b07c-aee73e6f77c2",
+    "application": {
+      "applicationId": ""
+    },
+    "user": {
+      "userId": ""
+    },
+    "new": true
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "EdwRequestId.de3a36f9-6591-436b-ba58-0bbffe584f75",
+    "locale": "en-GB",
+    "timestamp": "2017-04-07T14:52:48Z"
+  },
+  "version": "1.0"
+}

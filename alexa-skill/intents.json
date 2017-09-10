@@ -1,0 +1,169 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "ClawIntent",
+      "samples": [
+        "Zange {ClawOperation} "
+      ],
+      "slots": [
+        {
+          "name": "ClawOperation",
+          "type": "ClawValues",
+          "samples": [
+            "{ClawOperation} "
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DoItDudeIntent",
+      "samples": [
+        "Do it dude",
+        "Hopp",
+        "Auf"
+      ],
+      "slots": []
+    },
+    {
+      "name": "MoveIntent",
+      "samples": [
+        "Fahre {MoveOperation}"
+      ],
+      "slots": [
+        {
+          "name": "MoveOperation",
+          "type": "MoveValues",
+          "samples": [
+            "{MoveOperation} "
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StopIntent",
+      "samples": [
+        "Halt",
+        "Anhalten",
+        "Nicht mehr bewegen"
+      ],
+      "slots": []
+    }
+  ],
+  "types": [
+    {
+      "name": "ClawValues",
+      "values": [
+        {
+          "name": {
+            "value": "Öffnen"
+          }
+        },
+        {
+          "name": {
+            "value": "Schließen"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MoveValues",
+      "values": [
+        {
+          "name": {
+            "value": "Vorwärts"
+          }
+        },
+        {
+          "name": {
+            "value": "Rückwärts"
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-ClawIntent.IntentSlot-ClawOperation",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Was soll ich mit der Zange tun?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-MoveIntent.IntentSlot-MoveOperation",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Soll der Roboter vorwärts oder rückwärts fahren?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "ClawIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "ClawOperation",
+            "type": "ClawValues",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-ClawIntent.IntentSlot-ClawOperation"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DoItDudeIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      },
+      {
+        "name": "MoveIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "MoveOperation",
+            "type": "MoveValues",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-MoveIntent.IntentSlot-MoveOperation"
+            }
+          }
+        ]
+      },
+      {
+        "name": "StopIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      }
+    ]
+  }
+}

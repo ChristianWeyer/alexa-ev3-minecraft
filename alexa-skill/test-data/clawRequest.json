@@ -1,0 +1,28 @@
+{
+  "session": {
+    "sessionId": "SessionId.2e0d84a6-162e-4838-aef1-d83163fff334",
+    "application": {
+      "applicationId": ""
+    },
+    "attributes": {},
+    "user": {
+      "userId": ""
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.6cddaa57-3a6b-4b0f-b17e-a72bb8023189",
+    "locale": "de-DE",
+    "timestamp": "2017-05-20T09:56:49Z",
+    "intent": {
+      "name": "ClawIntent",
+      "slots": {
+        "Zange": {
+          "name": "Zange"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

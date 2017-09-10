@@ -1,0 +1,16 @@
+{
+  "name": "alexa-skill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-zip": "zip -r upload.zip node_modules index.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "1.0.10",
+    "request": "2.81.0"
+  }
+}
